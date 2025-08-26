@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Unlimited Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.8) 100%);
+        }
+        
+        .netflix-red {
+            background-color: #e50914;
+        }
+        
+        .text-netflix-red {
+            color: #e50914;
+        }
+        
+        .show-card:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="h-8 md:h-10">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_small.mp4" type="video/mp4">
+        </video>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto hero-gradient p-8 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 glow fade-in" style="font-family: 'Bebas Neue', sans-serif;">
+                UNLIMITED MOVIES, TV SHOWS & MORE
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 fade-in">Watch anywhere. Cancel anytime.</p>
+            <p class="text-lg mb-8 fade-in">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center fade-in">
+                <a href="https://nf.video/NNv1V" class="bg-netflix-red hover:bg-red-700 text-white px-6 py-3 md:py-4 rounded text-lg font-semibold flex items-center justify-center gap-2 transition">
+                    Get Started <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 border-t-8 border-gray-800">
+        <div class="container mx-auto px-6">
+            <!-- Feature 1 -->
+            <div class="flex flex-col md:flex-row items-center justify-between py-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Enjoy on your TV</h2>
+                    <p class="text-xl">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV" class="w-full">
+                    <div class="absolute top-0 left-0 w-full h-full z-0">
+                        <video autoplay muted loop class="w-full h-full object-contain" style="top: 20%; left: 13%; width: 73%; height: 53%; position: absolute;">
+                            <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="flex flex-col md:flex-row items-center justify-between py-12 border-t border-gray-800">
+                <div class="md:w-1/2 mb-8 md:mb-0 order-1 md:order-2 md:pl-12 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Download your shows to watch offline</h2>
+                    <p class="text-xl">Save your favorites easily and always have something to watch.</p>
+                </div>
+                <div class="md:w-1/2 order-2 md:order-1 relative">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Mobile" class="w-full">
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-black border-2 border-gray-600 rounded-xl p-2 flex items-center w-3/4">
+                        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="Stranger Things" class="h-16">
+                        <div class="ml-4 flex-1">
+                            <div class="font-semibold">Stranger Things</div>
+                            <div class="text-blue-400">Downloading...</div>
+                        </div>
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-download text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="flex flex-col md:flex-row items-center justify-between py-12 border-t border-gray-800">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Watch everywhere</h2>
+                    <p class="text-xl">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="Devices" class="w-full">
+                    <div class="absolute top-0 left-0 w-full h-full z-0">
+                        <video autoplay muted loop class="w-full h-full object-contain" style="top: 9%; left: 13%; width: 60%; height: 60%; position: absolute;">
+                            <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="flex flex-col md:flex-row items-center justify-between py-12 border-t border-gray-800">
+                <div class="md:w-1/2 mb-8 md:mb-0 order-1 md:order-2 md:pl-12 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Create profiles for kids</h2>
+                    <p class="text-xl">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+                </div>
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <img src="https://occ-0-3216-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d" alt="Kids" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Shows -->
+    <section class="py-16 border-t-8 border-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Popular on Netflix</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <!-- Show cards would be dynamically loaded here -->
+                <div class="show-card relative rounded overflow-hidden cursor-pointer">
+                    <img src="https://image.tmdb.org/t/p/w500/9yxep7oJdkj3Pla9TD9gKflRApY.jpg" alt="Stranger Things" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                        <div>
+                            <h3 class="font-bold">Stranger Things</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card relative rounded overflow-hidden cursor-pointer">
+                    <img src="https://image.tmdb.org/t/p/w500/gX5UrH1TLVVBwI7WxplW43BD6Z3.jpg" alt="The Witcher" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                        <div>
+                            <h3 class="font-bold">The Witcher</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card relative rounded overflow-hidden cursor-pointer">
+                    <img src="https://image.tmdb.org/t/p/w500/9jPa6SlU5nPH0kfFqAwfoIB6ihX.jpg" alt="Money Heist" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                        <div>
+                            <h3 class="font-bold">Money Heist</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card relative rounded overflow-hidden cursor-pointer">
+                    <img src="https://image.tmdb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg" alt="The Queen's Gambit" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                        <div>
+                            <h3 class="font-bold">The Queen's Gambit</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card relative rounded overflow-hidden cursor-pointer">
+                    <img src="https://image.tmdb.org/t/p/w500/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg" alt="The Crown" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                        <div>
+                            <h3 class="font-bold">The Crown</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1">4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 border-t-8 border-gray-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4 mb-12">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-800 rounded overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center text-xl hover:bg-gray-700 transition">
+                        <span>What is Netflix?</span>
+                        <i class="fas fa-plus transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden bg-gray-700">
+                        <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                        <p class="mt-2">You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-800 rounded overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center text-xl hover:bg-gray-700 transition">
+                        <span>How much does Netflix cost?</span>
+                        <i class="fas fa-plus transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden bg-gray-700">
+                        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $9.99 to $19.99 a month. No extra costs, no contracts.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-800 rounded overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center text-xl hover:bg-gray-700 transition">
+                        <span>Where can I watch?</span>
+                        <i class="fas fa-plus transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden bg-gray-700">
+                        <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                        <p class="mt-2">You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-800 rounded overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center text-xl hover:bg-gray-700 transition">
+                        <span>How do I cancel?</span>
+                        <i class="fas fa-plus transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden bg-gray-700">
+                        <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-gray-800 rounded overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center text-xl hover:bg-gray-700 transition">
+                        <span>What can I watch on Netflix?</span>
+                        <i class="fas fa-plus transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden bg-gray-700">
+                        <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-xl mb-6">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <input type="email" placeholder="Email address" class="px-4 py-3 md:py-4 w-full md:w-96 bg-black bg-opacity-70 border border-gray-600 rounded focus:outline-none focus:border-white">
+                    <button class="bg-netflix-red hover:bg-red-700 text-white px-6 py-3 md:py-4 rounded text-lg font-semibold flex items-center justify-center gap-2 transition">
+                        Get Started <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 border-t-8 border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <p class="mb-6">Questions? Call 1-844-505-2993</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <a href="#" class="hover:text-gray-300 transition">FAQ</a>
+                    <a href="#" class="hover:text-gray-300 transition">Help Center</a>
+                    <a href="#" class="hover:text-gray-300 transition">Account</a>
+                    <a href="#" class="hover:text-gray-300 transition">Media Center</a>
+                    <a href="#" class="hover:text-gray-300 transition">Investor Relations</a>
+                    <a href="#" class="hover:text-gray-300 transition">Jobs</a>
+                    <a href="#" class="hover:text-gray-300 transition">Ways to Watch</a>
+                    <a href="#" class="hover:text-gray-300 transition">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-300 transition">Privacy</a>
+                    <a href="#" class="hover:text-gray-300 transition">Cookie Preferences</a>
+                    <a href="#" class="hover:text-gray-300 transition">Corporate Information</a>
+                    <a href="#" class="hover:text-gray-300 transition">Contact Us</a>
+                    <a href="#" class="hover:text-gray-300 transition">Speed Test</a>
+                    <a href="#" class="hover:text-gray-300 transition">Legal Notices</a>
+                    <a href="#" class="hover:text-gray-300 transition">Only on Netflix</a>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="relative inline-block w-40">
+                        <select class="block appearance-none w-full bg-black border border-gray-600 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-white">
+                            <option>English</option>
+                            <option>Español</option>
+                            <option>Français</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Netflix - Clone for demonstration purposes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = button.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+        
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Show/hide navigation on scroll
+        let lastScroll = 0;
+        const navbar = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                navbar.classList.remove('bg-black');
+                navbar.classList.add('bg-gradient-to-b', 'from-black', 'to-transparent');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !navbar.classList.contains('scrolled-down')) {
+                // Scroll down
+                navbar.classList.remove('bg-gradient-to-b', 'from-black', 'to-transparent');
+                navbar.classList.add('bg-black', 'scrolled-down');
+            } else if (currentScroll < lastScroll && navbar.classList.contains('scrolled-down')) {
+                // Scroll up
+                navbar.classList.remove('scrolled-down');
+                navbar.classList.add('bg-gradient-to-b', 'from-black', 'to-transparent');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Animation for hero section elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroElements = document.querySelectorAll('.fade-in');
+            heroElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=chatgptxiaohuozi/my-netflix" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
